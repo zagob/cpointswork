@@ -1,7 +1,6 @@
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -18,13 +17,22 @@ export const DialogRegisterHour = () => {
           Registrar Horas
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-zinc-100">
+      <DialogContent className="w-fit">
         <DialogHeader>
           <DialogTitle hidden></DialogTitle>
         </DialogHeader>
         <CalendarDays />
 
-        <Input />
+        <div className="flex items-center gap-2">
+          <Input type="time" />
+          <Input type="time" />
+        </div>
+        <div className="flex items-center gap-2">
+          <Input type="time" />
+          <Input type="time" />
+        </div>
+
+        <Button className="rounded">Registrar</Button>
       </DialogContent>
     </Dialog>
   );
